@@ -1,44 +1,26 @@
-class BankAccount:
+#Define the base class Player
 
-def __init__(self, account_number,account_holder_name,initial_balance):
- self.__account_number = account_number
- self.__account_holder_name =  account_holder_name
- self.__account_balance = initial_balance
+class Player:
+  def play(self):
+    print("The player is playing cricket.")
 
-def deposit(self, amount):
- if (account > 0):
-  self.__account_balance += amount
-  print("Deposited₹{}.New balance:₹{}".format(amount,
-        self.__account_balance))
+#Define the derived class Batsman
 
- else:
-  print("Invalid deposit amount. Please deposit a positive amount.")
+class Batsman(Player):
+  def play(self):
+    print("The batsman is batting.")
 
-def withdraw(self. amount):
- if (amount > 0and amount <= self.__account_balance):
-   self.__account_balance -= amount
-   print("Withdrew₹{}.New balance:₹{}".format(amount,
-        self.__account_balance))
+#Define the derived class Bowler
 
- else:
-  print("Invalid withdrawal amount or insufficient balance")
-def display_balance(self):
-  print("Account balance for {} (Account #{}):₹{}".format(
+class Bowler(Player):
+  def play(self):
+    print("The bowler is bowling.")
 
-self.__account_holder_name, self.__account_number,
-self.__account_balance))
+#Create objects of Batsman and Bowler classes
 
-# Create an instance of the BankAccount class
+batsman=Batsman()
 
-account= BankAccount(account_number="123456789", account_holder_name="priya",
-initial_balance=5000.0)
-
-#Test deposit and withdrawal functionality
-
-account.display_balance()
-
-account.deposit(500.0)
-
-account.withdraw(200.0)
-
-account.display_balance()
+bowler=Bowler()
+#Call The play() method for each object 
+batsman.play()
+bowler.play()
